@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", serif;
+    color: #222;
+    background: #fff;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-icon {
+    width: 40px;
+    margin-bottom: 16px;
+}
+
+.hero-headline {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero-headline span,
+.hero-headline strong {
+    color: #f06a4d;
+}
+
+.hero-copy {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+/* ---------- SERVICES ---------- */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 100px 0;
+}
+
+.service {
+    text-align: center;
+}
+
+.services-image {
+    width: 120px;
+    margin-bottom: 24px;
+}
+
+.services-headline {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.services-copy {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.services-linktext {
+    font-size: 13px;
+    color: #f06a4d;
+    text-decoration: none;
+}
+
+/* ---------- FACILITIES ---------- */
+.facilities {
+    margin: 100px 0;
+}
+
+.facilities::before {
+    content: "Making your facility known is our priority";
+    display: block;
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+
+.facilities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.facilitie {
+    text-align: center;
+}
+
+.facilities-image {
+    width: 32px;
+    margin-bottom: 16px;
+}
+
+.facilities-headline {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.facilities-copy {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* ---------- SITES ---------- */
+.sites {
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+}
+
+.sites::before {
+    content: "Join the community campervan sites managers.";
+    font-size: 28px;
+    grid-column: 1 / -1;
+}
+
+.site {
+    text-align: center;
+}
+
+.sites-image {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.sites-headline {
+    font-size: 16px;
+}
+
+.sites-copy {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ---------- ADVANTAGES ---------- */
+.advantages {
+    margin: 120px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.advan {
+    text-align: center;
+}
+
+.advantages-image {
+    width: 32px;
+    margin-bottom: 16px;
+}
+
+.advantages-headline {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.advantages-copy {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    border-top: 1px solid #eee;
+    padding: 60px 0;
+    margin-top: 120px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .facilities,
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .sites {
+        grid-template-columns: 1fr;
+    }
+}
