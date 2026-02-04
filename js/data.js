@@ -96,3 +96,21 @@ let advantages = [
 ]
 
 // Opret dit dataobjekt til footerens indhold herunder
+
+
+
+
+let footer = [
+    {
+        headline: "Footer",
+        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
+    },
+    {
+        headline: "Digital markawdawdadaweting and editorial support",
+        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
+    },
+    {
+        headline: "Community of sawdawdawdawervices dedicated to campers",
+        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
+    },
+]
