@@ -7,42 +7,59 @@ services.forEach(service => console.log(service.headline))
 
 
 const heroFig = document.querySelector(".hero");
+heroFig.classList.add("hero-section");
 
-heroFig.innerHTML =
-    `<img class="hero-image" src="${hero.image}" alt="Woman">
-        <img class="hero-icon" src="${hero.icon}" alt="Icon">
-        <h1 class="hero-headline">${hero.headline}</h1>
-        <p class="hero-copy">${hero.copy}</p>
+heroFig.innerHTML = `
+    <div class="hero__content">
+        <img class="hero__icon" src="${hero.icon}" alt="">
+        <h1 class="hero__headline">${hero.headline}</h1>
+        <p class="hero__copy">${hero.copy}</p>
+    </div>
+    <div class="hero__media">
+        <img class="hero__image" src="${hero.image}" alt="">
     </div>
 `;
 
 
 
 
-const servicesFig = document.querySelector(".services");
 
-servicesFig.innerHTML = services.map(service => `
-    <div class="service">
-        <img class="services-image" src="${service.illustration}" alt="">
-        <h1 class="services-headline">${service.headline}</h1>
-        <p class="services-copy">${service.text}</p>
-        <a class="services-linktext" href="#">${service.linktext}</a>
+const servicesFig = document.querySelector(".services");
+servicesFig.classList.add("services-section");
+
+servicesFig.innerHTML = `
+    <div class="services__list">
+        ${services.map(service => `
+            <article class="service-card">
+                <img class="service-card__image" src="${service.illustration}" alt="">
+                <h3 class="service-card__headline">${service.headline}</h3>
+                <p class="service-card__copy">${service.text}</p>
+                <a class="service-card__link" href="#">${service.linktext}</a>
+            </article>
+        `).join("")}
     </div>
-`).join("");
+`;
+
 
 
 
 
 const facilitiesFig = document.querySelector(".facilities");
+facilitiesFig.classList.add("facilities-section");
 
-facilitiesFig.innerHTML = facilities.options.map(facilitie => `
-    <div class="facilitie">
-        <img class="facilities-image" src="${facilitie.icon}" alt="bob">
-        <h1 class="facilities-headline">${facilitie.headline}</h1>
-        <p class="facilities-copy">${facilitie.text}</p>
-        
+facilitiesFig.innerHTML = `
+    <h2 class="facilities__headline">${facilities.headline}</h2>
+    <div class="facilities__list">
+        ${facilities.options.map(option => `
+            <article class="facility-card">
+                <img class="facility-card__icon" src="${option.icon}" alt="">
+                <h3 class="facility-card__headline">${option.headline}</h3>
+                <p class="facility-card__copy">${option.text}</p>
+            </article>
+        `).join("")}
     </div>
-`).join("");
+`;
+
 
 
 
@@ -51,14 +68,28 @@ facilitiesFig.innerHTML = facilities.options.map(facilitie => `
 
 
 const sitesFig = document.querySelector(".sites");
+sitesFig.classList.add("sites-section");
 
-sitesFig.innerHTML = sites.places.map(site => `
-    <div class="site">
-        <img class="sites-image" src="${site.img}" alt="Bob3">
-        <h1 class="sites-headline">${site.name}</h1>
-        <p class="sites-copy">${site.city}</p>
+sitesFig.innerHTML = `
+    <div class="sites__intro">
+        <h2 class="sites__headline">${sites.headline}</h2>
+        <p class="sites__text">${sites.text}</p>
+        <button class="sites__button">
+            Start <img src="${sites.btnicon}" alt="">
+        </button>
     </div>
-`).join("");
+
+    <div class="sites__list">
+        ${sites.places.map(site => `
+            <article class="site-card">
+                <img class="site-card__image" src="${site.img}" alt="">
+                <h3 class="site-card__headline">${site.name}</h3>
+                <p class="site-card__city">${site.city}</p>
+            </article>
+        `).join("")}
+    </div>
+`;
+
 
 
 
@@ -66,14 +97,20 @@ sitesFig.innerHTML = sites.places.map(site => `
 
 
 const advantagesFig = document.querySelector(".advantages");
+advantagesFig.classList.add("advantages-section");
 
-advantagesFig.innerHTML = advantages.map(advan => `
-    <div class="advan">
-        <img class="advantages-image" src="${advan.icon}" alt="">
-        <h1 class="advantages-headline">${advan.headline}</h1>
-        <p class="advantages-copy">${advan.text}</p>
+advantagesFig.innerHTML = `
+    <div class="advantages__list">
+        ${advantages.map(item => `
+            <article class="advantage-card">
+                <img class="advantage-card__icon" src="${item.icon}" alt="">
+                <h3 class="advantage-card__headline">${item.headline}</h3>
+                <p class="advantage-card__copy">${item.text}</p>
+            </article>
+        `).join("")}
     </div>
-`).join("");
+`;
+
 
 
 
