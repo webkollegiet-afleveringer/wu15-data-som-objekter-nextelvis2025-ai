@@ -121,9 +121,35 @@ advantagesFig.innerHTML = `
 
 const footerFig = document.querySelector(".footer");
 
-footerFig.innerHTML = footer.map(advan => `
-    <div class="advan">
-        <h1 class="footer-headline">${advan.headline}</h1>
-        <p class="footer-copy">${advan.text}</p>
+footerFig.innerHTML = `
+    <div class="footer-top">
+
+        <div class="footer-brand">
+            <p class="footer-brand-name">${footer.brand.title}</p>
+            <h2 class="footer-brand-slogan">${footer.brand.slogan}</h2>
+        </div>
+
+        <div class="footer-columns">
+            ${footer.columns.map(column => `
+                <div class="footer-column">
+                    <h3 class="footer-headline">${column.headline}</h3>
+                    <ul class="footer-links">
+                        ${column.links.map(link => `
+                            <li><a href="#">${link}</a></li>
+                        `).join("")}
+                    </ul>
+                </div>
+            `).join("")}
+        </div>
+
     </div>
-`).join("");
+
+    <div class="footer-bottom">
+        <p class="footer-copy">${footer.bottom.copyright}</p>
+        <ul class="footer-bottom-links">
+            ${footer.bottom.links.map(link => `
+                <li><a href="#">${link}</a></li>
+            `).join("")}
+        </ul>
+    </div>
+`;

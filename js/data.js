@@ -100,17 +100,27 @@ let advantages = [
 
 
 
-let footer = [
-    {
-        headline: "Footer",
-        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
+let footer = {
+    brand: {
+        title: "Easy Camper",
+        slogan: "When Passion Meets Comfort."
     },
-    {
-        headline: "Digital markawdawdadaweting and editorial support",
-        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
-    },
-    {
-        headline: "Community of sawdawdawdawervices dedicated to campers",
-        text: "You don’t have to find out later or only after camenierk and trarsparent Easyamper ratains pliacas and beautias of your tariaary and halpin a fixed commission on each transaction of"
-    },
-]
+    columns: [
+        {
+            headline: "Discover the Network",
+            links: ["Where to shop", "Tour Guided", "Our Tours", "About Us"]
+        },
+        {
+            headline: "Become a Manager",
+            links: ["Join your Pairing", "Offer your Service", "Are you a guide?"]
+        },
+        {
+            headline: "Assistance",
+            links: ["Support Center", "FAQs", "Cancellation Options", "Reliability and Security"]
+        }
+    ],
+    bottom: {
+        copyright: "EasyCamper. All rights reserved.",
+        links: ["About", "Site Map", "Terms", "Privacy Policy", "Teams"]
+    }
+};
