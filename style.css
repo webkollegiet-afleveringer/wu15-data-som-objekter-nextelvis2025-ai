@@ -1,3 +1,4 @@
+/* ---------------- RESET ---------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 
 body {
     font-family: "Georgia", serif;
-    color: #222;
+    color: #1f1f1f;
     background: #fff;
 }
 
@@ -16,196 +17,219 @@ body {
     padding: 0 24px;
 }
 
-/* ---------- HERO ---------- */
-.hero {
+/* ---------------- HERO ---------------- */
+.hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
-    margin: 80px 0;
+    gap: 64px;
+    margin: 96px 0;
 }
 
-.hero-image {
-    width: 100%;
+.hero__content {
+    background: #fff;
+    padding: 48px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
-.hero-icon {
-    width: 40px;
-    margin-bottom: 16px;
+.hero__icon {
+    width: 32px;
+    margin-bottom: 24px;
 }
 
-.hero-headline {
+.hero__headline {
     font-size: 42px;
     line-height: 1.2;
     margin-bottom: 16px;
 }
 
-.hero-headline span,
-.hero-headline strong {
-    color: #f06a4d;
+.hero__headline span,
+.hero__headline strong {
+    color: #f26a4b;
 }
 
-.hero-copy {
-    font-size: 16px;
-    line-height: 1.6;
+.hero__copy {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
     max-width: 420px;
 }
 
-/* ---------- SERVICES ---------- */
-.services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin: 100px 0;
+.hero__media {
+    position: relative;
 }
 
-.service {
+.hero__image {
+    width: 1000px;
+    border-radius: 6px;
+    position: relative;
+    right: 355px;
+    top: 20px;
+    z-index: -1;
+}
+
+/* ---------------- SERVICES ---------------- */
+.services-section {
+    margin: 120px 0;
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+}
+
+.service-card {
     text-align: center;
 }
 
-.services-image {
+.service-card__image {
     width: 120px;
     margin-bottom: 24px;
 }
 
-.services-headline {
+.service-card__headline {
     font-size: 18px;
     margin-bottom: 12px;
 }
 
-.services-copy {
+.service-card__copy {
     font-size: 14px;
     line-height: 1.6;
+    color: #777;
     margin-bottom: 12px;
 }
 
-.services-linktext {
+.service-card__link {
     font-size: 13px;
-    color: #f06a4d;
+    color: #f26a4b;
     text-decoration: none;
 }
 
-/* ---------- FACILITIES ---------- */
-.facilities {
-    margin: 100px 0;
+/* ---------------- FACILITIES ---------------- */
+.facilities-section {
+    margin: 140px 0;
 }
 
-.facilities::before {
-    content: "Making your facility known is our priority";
-    display: block;
+.facilities__headline {
     font-size: 28px;
-    margin-bottom: 60px;
+    margin-bottom: 64px;
 }
 
-.facilities {
+.facilities__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 48px;
 }
 
-.facilitie {
+.facility-card {
     text-align: center;
 }
 
-.facilities-image {
+.facility-card__icon {
     width: 32px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.facilities-headline {
+.facility-card__headline {
     font-size: 16px;
     margin-bottom: 8px;
 }
 
-.facilities-copy {
+.facility-card__copy {
     font-size: 13px;
-    line-height: 1.5;
-    color: #666;
+    color: #777;
+    line-height: 1.6;
 }
 
-/* ---------- SITES ---------- */
-.sites {
-    margin: 120px 0;
+/* ---------------- SITES ---------------- */
+.sites-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    gap: 64px;
+    margin: 140px 0;
 }
 
-.sites::before {
-    content: "Join the community campervan sites managers.";
+.sites__intro {
+    max-width: 320px;
+}
+
+.sites__headline {
     font-size: 28px;
-    grid-column: 1 / -1;
+    margin-bottom: 16px;
 }
 
-.site {
+.sites__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777;
+    margin-bottom: 24px;
+}
+
+.sites__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #f26a4b;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sites__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.site-card {
     text-align: center;
 }
 
-.sites-image {
+.site-card__image {
     width: 100%;
     border-radius: 6px;
     margin-bottom: 12px;
 }
 
-.sites-headline {
-    font-size: 16px;
+.site-card__headline {
+    font-size: 15px;
 }
 
-.sites-copy {
+.site-card__city {
     font-size: 13px;
     color: #777;
 }
 
-/* ---------- ADVANTAGES ---------- */
-.advantages {
-    margin: 120px 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+/* ---------------- ADVANTAGES ---------------- */
+.advantages-section {
+    margin: 140px 0;
 }
 
-.advan {
+.advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+}
+
+.advantage-card {
     text-align: center;
 }
 
-.advantages-image {
+.advantage-card__icon {
     width: 32px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.advantages-headline {
+.advantage-card__headline {
     font-size: 16px;
     margin-bottom: 8px;
 }
 
-.advantages-copy {
-    font-size: 13px;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* ---------- FOOTER ---------- */
-.footer {
-    border-top: 1px solid #eee;
-    padding: 60px 0;
-    margin-top: 120px;
+.advantage-card__copy {
     font-size: 13px;
     color: #777;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 900px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .services,
-    .facilities,
-    .advantages {
-        grid-template-columns: 1fr;
-    }
-
-    .sites {
-        grid-template-columns: 1fr;
-    }
+    line-height: 1.6;
 }
